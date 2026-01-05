@@ -381,8 +381,10 @@ Since PSP is depracted we need to use PSS
 ```sh
 kubectl label namespace my-app pod-security.kubernetes.io/enforce=restricted
 ```
-
-
+## 28. Taints
+```sh
+kubectl taints node nodeUno app=blue:NoSchedule
+```
 
 
 
