@@ -382,11 +382,9 @@ Since PSP is depracted we need to use PSS
 kubectl label namespace my-app pod-security.kubernetes.io/enforce=restricted
 ```
 ## 28. Taints
-NodeSelector - Run selector 
-Taint + tolerations - Protect nodes from random pods
+NodeSelector - Run selector →  "Come here"          
+Taint + tolerations - Protect nodes from random pods Taint  →  "Stay away" 
+Toleration     →  "I'm allowed"
 ```sh
 kubectl taints node nodeUno app=blue:NoSchedule
 ```
-
-
-
