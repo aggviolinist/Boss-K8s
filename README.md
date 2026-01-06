@@ -386,5 +386,9 @@ NodeSelector - Run selector →  "Come here"
 Taint + tolerations - Protect nodes from random pods Taint  →  "Stay away" 
 Toleration     →  "I'm allowed"
 ```sh
-kubectl taints node nodeUno app=blue:NoSchedule
+kubectl taint node nodeUno app=blue:NoSchedule
+```
+Untaint a node
+```sh
+kubectl taint node minikube app=blue:NoSchdule-
 ```
