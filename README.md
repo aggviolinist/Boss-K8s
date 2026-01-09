@@ -9,6 +9,11 @@ Updating changes
 ```sh
 kubectl replace --force -f updates.yaml
 ```
+ALIAS
+```sh
+alias k=kubectl
+alias cl=clear
+```
 Changing from default to dev 
 ```sh
 kubectl config set-context $(kubectl config current-context)  --n =dev
@@ -406,5 +411,7 @@ kubectl get pod
 ```sh
 kubectl rollout status deployment/worker-deploy
 kubectl rollout history deployment/worker-deploy
+kubectl rokkout undo deployment/worker-deploy
+kubectl set image deployment/worker-deploy nginx=nginx:1.9.23
 ```
 
