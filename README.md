@@ -392,3 +392,13 @@ Untaint a node
 ```sh
 kubectl taint node minikube app=blue:NoSchdule-
 ```
+## 29. Metric collection
+Check Node Resource Utilization
+```sh
+kubectl get node
+```
+Check Pod Resource Utilization
+```sh
+kubectl get pod
+```
+
