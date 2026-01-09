@@ -402,3 +402,9 @@ Check Pod Resource Utilization
 kubectl get pod
 ```
 
+## 30. Rolling updates
+```sh
+kubectl rollout status deployment/worker-deploy
+kubectl rollout history deployment/worker-deploy
+```
+
