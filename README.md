@@ -18,6 +18,7 @@ Changing from default to dev
 ```sh
 kubectl config set-context $(kubectl config current-context)  --n =dev
 ```
+Cronjobs use the UTC time format
 
 ## 1. Installing all the dependencies needed to run the Sinatra ruby app
 ```sh
