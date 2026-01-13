@@ -416,3 +416,16 @@ kubectl rokkout undo deployment/worker-deploy
 kubectl set image deployment/worker-deploy nginx=nginx:1.9.23
 ```
 
+## 31. Network Policies
+These restrict traffic e.g A DB that should only be accessed by backend on port 3306 and no front end should access DB
+```sh
+cd apps/k8s-prep/policies/network-policies.yaml
+```
+Best practice
+```sh
+labels:
+  app: mysql # - for services 
+  role: db   # - for network polices
+  tier: backend # - for scaling/monitoring
+```
+
