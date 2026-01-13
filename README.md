@@ -428,4 +428,11 @@ labels:
   role: db   # - for network polices
   tier: backend # - for scaling/monitoring
 ```
+So for we can configure both ingress and egress
+```sh
+- Blocking all traffic by default and protecting a specific pod (database).
+- Allowing traffic from a specific pod and namespace. (AND, OR)
+- Permitting access from external sources e.g a backup server on AWS using IP blocks. 
+- Defining egress rules for outbound communications e.g backup server on AWS
+```
 
