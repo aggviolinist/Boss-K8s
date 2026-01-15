@@ -128,6 +128,10 @@ kubectl delete svc sinatra-webapp -- Delete our custom ClusterIP
 ```
 
 ## 11. Using Nodeport to access cluster (using port to connect to cluster)
+Create nodeport using CLI
+```sh
+kubectl create service nodeport ngix-svc --tcp=808:80 --node-port=30081 --dry-run=client -o yaml > ngix-svc.yaml
+```
 This is useful when we want to access our cluster using our nodeport
 ```sh
 kubectl apply -f k8s/service-nodeport.yml
