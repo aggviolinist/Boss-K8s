@@ -446,6 +446,9 @@ Create an ingress using CLI
 ```sh
 kubectl create ingress payment-ingress -n production --rule="/pay=pay-service:8282"
 ```
+```sh
+kubectl expose ingress ingress-resources -n ingress-ns --rule="/wear=wear-service:8080" --rule="/watch=video-service:8080"
+```
 If we want to change the route from /pay to /
 ```sh
 annotations:
