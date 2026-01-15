@@ -454,4 +454,8 @@ If we want to change the route from /pay to /
 annotations:
   nginx.ingress.kubernetes.io/rewrite-target: /
 ```
-
+Repeated HTTP 308 redirects indicates SSL redirection is enforced so to remove it just use:
+```sh
+annotations:
+  nginx.ingress.kubernetes.io/ssl-redirect: "false"
+```
