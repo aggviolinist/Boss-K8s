@@ -182,6 +182,7 @@ kubectl get pods -n ingress-nginx
 Expose the port to the net
 ```sh
 kubectl expose deployment sinatra-webapp --type=NodePort --port=8080
+kubectl expose deployment ingress-controller-deploy --name=nginx-svc --type=NodePort --port=8080 --target-port=8080 -n=ingress-ns -o yaml > nginx-svc.yaml
 ```
 Check out the service
 ```sh
