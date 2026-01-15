@@ -436,3 +436,14 @@ So for we can configure both ingress and egress
 - Defining egress rules for outbound communications e.g backup server on AWS
 ```
 
+## 32. Ingress
+Create an ingress using CLI
+```sh
+kubectl create ingress payment-ingress -n production --rule="/pay=pay-service:8282"
+```
+If we want to change the route from /pay to /
+```sh
+annotations:
+  nginx.ingress.kubernetes.io/rewrite-target: /
+```
+
