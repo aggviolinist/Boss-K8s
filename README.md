@@ -110,6 +110,11 @@ kubectl run -it --rm --restart=Never busybox --image=busybox -- sh
 wget 10.0.0.1:4567 -- Grab the IP address of the pod
 cat index.html
 ```
+Force update a pod
+```sh
+kubectl edit pvc my-claim-1
+kubectl replace --force -f pvc.yaml
+```
 ## 10. Using ClusterIP to access cluster (static)
 This is useful if we want to cummunicate with other clusters using a static IP address
 ```sh
@@ -459,3 +464,5 @@ Repeated HTTP 308 redirects indicates SSL redirection is enforced so to remove i
 annotations:
   nginx.ingress.kubernetes.io/ssl-redirect: "false"
 ```
+
+
