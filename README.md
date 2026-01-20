@@ -474,5 +474,21 @@ Switching context to another use
 ```sh
 kubectl config use-context research --kubeconfig /root/my-kube-config
 ```
-
+## RBAC
+Create a Role
+```sh
+kubectl apply -f dev-role.yaml
+kubectl get role pod-reader
+kubectl describe role pod-reader
+```
+Create a role binding
+```sh
+kubectl apply -f dev-role-binding.yaml
+kubectl get rolebindings pod-reader-binding -n dev-ns
+kubectl describe rolebindings pod-reader-binding -n dev-ns
+```
+Confirm the auth
+```sh
+kubectl auth can-i list pods --as elpadrino -n dev-ns
+```
 
