@@ -465,4 +465,14 @@ annotations:
   nginx.ingress.kubernetes.io/ssl-redirect: "false"
 ```
 
+## 33. Kubeconfig
+View the kubeconfig configuration
+```sh
+kubectl config view --kubeconfig=my-custom-config
+```
+Switching context to another use
+```sh
+kubectl config use-context research --kubeconfig /root/my-kube-config
+```
+
 
