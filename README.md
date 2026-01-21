@@ -478,12 +478,14 @@ kubectl config use-context research --kubeconfig /root/my-kube-config
 Create a Role
 ```sh
 kubectl apply -f dev-role.yaml
+kubectl create role devops --verb=list,create,delete --resource=pods
 kubectl get role pod-reader
 kubectl describe role pod-reader
 ```
 Create a role binding
 ```sh
 kubectl apply -f dev-role-binding.yaml
+kubectl create rolebinding devops-rolebinding --role=devops --user=dev-user
 kubectl get rolebindings pod-reader-binding -n dev-ns
 kubectl describe rolebindings pod-reader-binding -n dev-ns
 ```
@@ -491,4 +493,5 @@ Confirm the auth
 ```sh
 kubectl auth can-i list pods --as elpadrino -n dev-ns
 ```
+
 
