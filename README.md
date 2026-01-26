@@ -474,7 +474,7 @@ Switching context to another use
 ```sh
 kubectl config use-context research --kubeconfig /root/my-kube-config
 ```
-## RBAC
+## 34. RBAC
 Create a Role
 ```sh
 kubectl apply -f dev-role.yaml
@@ -493,5 +493,20 @@ Confirm the auth
 ```sh
 kubectl auth can-i list pods --as elpadrino -n dev-ns
 ```
-
-
+## 35. Kustomize - overlays
+k8s/
+└── base/
+    ├── kustomization.yaml
+    ├── nginx-depl.yaml
+    ├── service.yaml
+    └── redis-depl.yaml
+└── overlays/
+    ├── dev/
+    │   ├── kustomization.yaml
+    │   └── config-map.yaml
+    ├── stg/
+    │   ├── kustomization.yaml
+    │   └── config-map.yaml
+    └── prod/
+        ├── kustomization.yaml
+        └── config-map.yaml
