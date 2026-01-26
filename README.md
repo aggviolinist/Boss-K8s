@@ -510,3 +510,9 @@ k8s/
     └── prod/
         ├── kustomization.yaml
         └── config-map.yaml
+
+## 36. Debugging the pods
+```sh
+kubectl exec -it webapp-color -- sh
+nc -v -z -w 2 secure-service 80
+```
