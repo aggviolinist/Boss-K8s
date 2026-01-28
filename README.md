@@ -517,4 +517,4 @@ kubectl exec -it webapp-color -- sh
 nc -v -z -w 2 secure-service 80
 ```
 
-## 37. 
+## 37. exam-mode
