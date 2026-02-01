@@ -454,6 +454,9 @@ kubectl create ingress payment-ingress -n production --rule="/pay=pay-service:82
 ```sh
 kubectl expose ingress ingress-resources -n ingress-ns --rule="/wear=wear-service:8080" --rule="/watch=video-service:8080"
 ```
+```sh
+kubectl create ingress ingress-prac -n dev --rule="mock-exam.com/video= my-video-service:8080" --dry-run=client -o yaml > ingress-prac.yaml 
+```
 If we want to change the route from /pay to /
 ```sh
 annotations:
