@@ -367,6 +367,7 @@ command: ["sleep","3600"]
 ```
 
 ## 26. Cronjobs
+```
 * * * * * command-to-run
 │ │ │ │ │
 │ │ │ │ └── Day of week (0–7)  (0 or 7 = Sunday)
@@ -374,7 +375,7 @@ command: ["sleep","3600"]
 │ │ └────── Day of month (1–31)
 │ └──────── Hour (0–23)
 └────────── Minute (0–59)
-
+```
 
 ## 27. Security 
 - Pod security is important, we must ensure pods dont run as root!
